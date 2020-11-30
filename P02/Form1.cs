@@ -35,7 +35,7 @@ namespace P02
                         int cislo = rnd.Next(1, 50);
                         pole[i] = cislo;
                     }
-                    if(radioButton1.Checked==true)
+                    if(radioButton1.Checked)
                     {
                         int zacatek = 2147483647, max;
                         foreach (int cisilko in pole)
@@ -58,7 +58,7 @@ namespace P02
                             zacatek = max;
                         }
                     }
-                    if (radioButton2.Checked == true)
+                    else
                     {
                         int zacatek = -2147483648, min;
                         foreach (int cisilko in pole)

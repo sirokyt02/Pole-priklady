@@ -29,7 +29,7 @@ namespace P01
                 {
                     Random rnd = new Random();
                     int[] pole = new int[pocet];
-                    int min = 2147483647, max = -2147483648, poradimax = 0, poradimin = 0;
+                    int min = int.MaxValue, max = int.MinValue, poradimax = 0, poradimin = 0;
                     for (int i = 0; i < pocet; i++)
                     {
                         int cislo = rnd.Next(50, 250);
