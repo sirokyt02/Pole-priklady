@@ -39,12 +39,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 221);
+            this.label5.Location = new System.Drawing.Point(9, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 21;
@@ -53,7 +55,7 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(452, 237);
+            this.listBox3.Location = new System.Drawing.Point(222, 143);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(99, 95);
             this.listBox3.TabIndex = 20;
@@ -61,7 +63,7 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(347, 237);
+            this.listBox2.Location = new System.Drawing.Point(117, 143);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(99, 95);
             this.listBox2.TabIndex = 19;
@@ -69,7 +71,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(242, 237);
+            this.listBox1.Location = new System.Drawing.Point(12, 143);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(99, 95);
             this.listBox1.TabIndex = 18;
@@ -77,7 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(242, 159);
+            this.label4.Location = new System.Drawing.Point(12, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 13);
             this.label4.TabIndex = 17;
@@ -86,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 133);
+            this.label3.Location = new System.Drawing.Point(12, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 13);
             this.label3.TabIndex = 16;
@@ -94,21 +96,21 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(383, 156);
+            this.textBox2.Location = new System.Drawing.Point(153, 62);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(163, 20);
             this.textBox2.TabIndex = 15;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(383, 130);
+            this.textBox1.Location = new System.Drawing.Point(153, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 20);
             this.textBox1.TabIndex = 14;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(317, 182);
+            this.button1.Location = new System.Drawing.Point(87, 88);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 23);
             this.button1.TabIndex = 13;
@@ -120,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(242, 335);
+            this.label2.Location = new System.Drawing.Point(12, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 12;
@@ -130,18 +132,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 103);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 26);
             this.label1.TabIndex = 11;
             this.label1.Text = "Zadejte počet čísel, která se mají vygenerovat v rozsahu (0,100).\r\nZadejte číslo," +
     " podle kterého se bude pole třídit.";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(114, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Menší než číslo:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(222, 127);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Vetší než číslo:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(335, 263);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
@@ -173,6 +195,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

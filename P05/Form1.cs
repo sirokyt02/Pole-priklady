@@ -19,23 +19,42 @@ namespace P05
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text != "") || (textBox2.Text != ""))
+            if ((textBox1.Text != "") && (textBox2.Text != ""))
             {
-                int pocet = Convert.ToInt32(textBox1.Text);
-                if (pocet != 0)
+                int amount = Convert.ToInt32(textBox1.Text);
+                int number = Convert.ToInt32(textBox2.Text);
+                if (amount != 0)
                 {
                     label2.Visible = false;
                     listBox1.Items.Clear();
                     listBox2.Items.Clear();
                     listBox3.Items.Clear();
                     Random rnd = new Random();
-                    int[] pole = new int[pocet];
-                    for (int i = 0; i < pocet; i++)
+                    int[] field = new int[amount];
+                    for (int i = 0; i < amount; i++)
                     {
-                        pole[i] = rnd.Next(1, 100);
-                        listBox1.Items.Add(pole[i].ToString());
+                        field[i] = rnd.Next(1, 100);
                     }
-
+                    Array.Sort(field);
+                    int lower = 0;
+                    foreach (int n in field)
+                    {
+                        listBox1.Items.Add(n.ToString());
+                        if (n <= number)
+                        {
+                            lower++;
+                        }
+                    }
+                    int[] lowfield = field.Take(lower).ToArray();
+                    int[] highfield = field.Skip(lower).ToArray();
+                    foreach(int n in lowfield)
+                    {
+                        listBox2.Items.Add(n.ToString());
+                    }
+                    foreach (int n in highfield)
+                    {
+                        listBox3.Items.Add(n.ToString());
+                    }
                 }
                 else
                 {
