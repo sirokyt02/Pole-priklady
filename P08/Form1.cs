@@ -32,14 +32,31 @@ namespace P08
                 }
                 if((field[end]>47)&&(field[end]<58))
                 {
-                    for(int i=0;i<=end)
+                    for(int i=0;i<=end;i++)
                     {
-                        if((ch>47)&&(ch<58))
+                        if((field[i]>47)&&(field[i]<58))
                         {
-
+                            field[i] = 'x';
                         }
                     }
                 }
+                else
+                {
+                    char maxchar=field[0];int place = 0;
+                    for(int i =0;i<=end;i++)
+                    {
+                        if (field[i] > maxchar) { maxchar = field[i];place = i; };
+                    }
+                    maxchar = field[place];
+                    field[place] = field[end];
+                    field[end] = maxchar;
+                }
+                string s="";
+                foreach(char ch in field)
+                {
+                    s += ch;
+                }
+                textBox2.Text = s;
             }
             else
             {
