@@ -32,7 +32,7 @@ namespace P09
                 {
                     label2.Visible = false;
                     listBox1.Items.Clear();
-                    int[] field = new int[size];
+                    double[] field = new double[size];
                     Random rnd = new Random();
                     for(int i=0; i<size;i++)
                     {
@@ -55,10 +55,14 @@ namespace P09
                         mid = ((size - 1) / 2)+1;
                         mid = field[(int)mid - 1];
                     }
-                    int count = 0;
-                    foreach(int i in field)
+                    int count;
+                    int countfirst= Array.IndexOf(field, mid);
+                    int countlast = Array.LastIndexOf(field, mid);
+                    if (countfirst == -1) count = 0;
+                    else
                     {
-                        if (i == mid) count++;
+                        if (countfirst == countlast) count = 1;
+                        else { count = (countlast - countfirst) + 1; }
                     }
                     label2.ForeColor = Color.Black;
                     label2.Text = "Medián je číslo " + mid.ToString() + ". Toto číslo se celkem vyskytlo " + count.ToString() + "x.";
